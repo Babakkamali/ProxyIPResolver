@@ -1,0 +1,75 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.o
+
+# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
+.glide/
+
+# Project-local vendor directory
+vendor/
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# IDE files
+.idea/
+*.swp
+*.swo
+.vscode/
+*.vscode*
+*.sublime-workspace
+*.sublime-project
+
+# Mac OS X
+.DS_Store
+
+# Go build
+bin/
+pkg/
+
+# Log files
+*.log
+
+# Golang specific
+*.a
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+# Golang test / benchmark files
+*.test
+*.bench
+
+# Ginkgo test files
+*.coverprofile
+
+# Node.js
+node_modules/
+
+# Linters
+.scannerwork/
+
+# Certificate files
+*.pem
+
+# JetBrains IDEs
+.idea/
+
+# Microsoft VS Code
+.vscode/
+*.code-workspace
+
+# Others
+tmp/
+temp/
