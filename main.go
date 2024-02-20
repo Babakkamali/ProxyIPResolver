@@ -92,6 +92,12 @@ func ipHandler(w http.ResponseWriter, r *http.Request, showAll bool) {
 	fmt.Fprint(w, response.String())
 }
 
+func healthCheckHandler(w http.ResponseWriter, r *http.Request) {
+    // Respond with a simple message or JSON object indicating the service is up
+    w.WriteHeader(http.StatusOK) // 200 OK status
+    fmt.Fprintf(w, "O")
+}
+
 func main() {
 
 	showAllHeaders := flag.Bool("show-all-headers", false, "Show all HTTP headers")
@@ -102,6 +108,11 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 	ipHandler(w, r, *showAllHeaders)
 	})
+
+	  // Handler for the /health endpoint
+	http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
+        healthCheckHandler(w, r)
+    })
 
 	fmt.Println("App listening on port 3000!")
 	if err := http.ListenAndServe("0.0.0.0:3000", nil); err != nil {
