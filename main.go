@@ -18,8 +18,8 @@ var headersToCheck = []headerCheck{
     {"True-Client-IP", true},				// Akamai and some others
     {"Ar-Real-Ip", true},					// ArvanCloud CDN
     {"X-Real-IP", true},
-    {"Forwarded-For", true},
     {"X-Forwarded-For", true},
+    {"Forwarded-For", true},
     {"X-Client-Ip", false},
     {"Forwarded", false},
     {"X-Forwarded", false},		
