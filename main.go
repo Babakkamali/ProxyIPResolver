@@ -8,6 +8,7 @@ import (
 	"strings"
 	"time"
 	"log"
+	"os"
 )
 
 type headerCheck struct {
@@ -114,6 +115,11 @@ func main() {
 	flag.BoolVar(showAllHeaders, "all", false, "Show all HTTP headers (shorthand)")
 
 	flag.Parse()
+	
+	// Check for the environment variable as well
+    if os.Getenv("SHOW_ALL_HEADERS") == "true" {
+        *showAllHeaders = true
+    }
 
     // Wrap the ipHandler with the Logger middleware
     http.HandleFunc("/", Logger(func(w http.ResponseWriter, r *http.Request) {

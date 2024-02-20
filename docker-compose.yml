@@ -6,6 +6,7 @@ services:
       - "3000:3000"
     environment:
       - GO_ENV=production
+      - SHOW_ALL_HEADERS=false # set true to see all headers
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
       interval: 30s

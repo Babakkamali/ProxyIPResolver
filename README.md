@@ -56,6 +56,20 @@ You can also run ProxyIPResolver within a Docker container. Make sure you have d
 docker compose up -d
 ```
 
+## Docker All Header Usage
+
+when using Docker or Docker Compose, you can specify the environment variable in your docker-compose.yml file:
+
+```bash
+services:
+  appserver:
+    environment:
+      - SHOW_ALL_HEADERS=true
+
+```
+
+set the SHOW_ALL_HEADERS=true to receive all headers
+
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests with improvements or additional features.
