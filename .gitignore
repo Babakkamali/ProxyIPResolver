@@ -8,6 +8,10 @@
 *.out
 *.o
 
+# common linux binaries without file extentsion name
+main
+proxyipresolver
+
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
 
