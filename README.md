@@ -50,10 +50,7 @@ To display all HTTP request headers, start the application with the `--show-all-
 
 ### Docker Support
 
-You can also run ProxyIPResolver within a Docker container. Here's a simple `Dockerfile` you can use:
-
-
-Build and run the Docker container:
+You can also run ProxyIPResolver within a Docker container. Make sure you have docker and docker compose plugin installed And then build and run the Docker container:
 
 ```bash
 docker compose up -d
