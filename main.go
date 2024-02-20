@@ -105,7 +105,7 @@ func Logger(next http.HandlerFunc) http.HandlerFunc {
 func healthCheckHandler(w http.ResponseWriter, r *http.Request) {
 	// Respond with a simple message or JSON object indicating the service is up
 	w.WriteHeader(http.StatusOK) // 200 OK status
-	fmt.Fprintf(w, "O")
+	fmt.Fprintf(w, "OK")
 }
 
 func main() {
