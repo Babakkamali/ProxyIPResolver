@@ -127,9 +127,9 @@ func main() {
     }))
 
 	// Handler for the /health endpoint
-	http.HandleFunc("/health", Logger(func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
 		healthCheckHandler(w, r)
-	}))
+	})
 
 	fmt.Println("App listening on port 3000!")
 	if err := http.ListenAndServe("0.0.0.0:3000", nil); err != nil {
